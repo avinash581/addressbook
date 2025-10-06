@@ -162,7 +162,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3.2</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -294,7 +294,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-site-plugin</artifactId>
-                        <version>3.3</version>
+                        <version>3.3.2</version>
                         <configuration>
                             <reportPlugins>
                                 <plugin>
@@ -317,7 +317,7 @@
                                 <plugin>
                                     <groupId>org.apache.maven.plugins</groupId>
                                     <artifactId>maven-pmd-plugin</artifactId>
-                                    <version>3.2</version>
+                                    <version>3.3.2</version>
                                     <configuration>
                                         <targetJdk>1.8</targetJdk>
                                         <aggregate>true</aggregate>
@@ -431,7 +431,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-pmd-plugin</artifactId>
-                        <version>2.5</version>
+                        <version>3.3.2</version>
                         <configuration>
                             <targetJdk>1.8</targetJdk>
                             <aggregate>true</aggregate>
@@ -448,7 +448,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
-                        <version>2.9.1</version>
+                        <version>3.3.2</version>
                         <configuration>
                             <configLocation>addressbook-build/checkstyle.xml</configLocation>
                         </configuration>
@@ -485,7 +485,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jxr-plugin</artifactId>
-                        <version>2.1</version>
+                        <version>3.3.2</version>
                     </plugin>
                 </plugins>
             </reporting>
