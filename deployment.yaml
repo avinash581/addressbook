@@ -19,7 +19,7 @@ spec:
         app: mydeploy
     spec:
       containers:
-      - image: rajendrait99/addressbook:1.0
+      - image: avinashreddi123456/practice_123:17
         name: addressbook
         ports:
         - containerPort: 8080
