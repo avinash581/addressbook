@@ -2,29 +2,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  name: mydeploy
   labels:
     app: mydeploy
-  name: mydeploy
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: mydeploy
-  strategy: {}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: mydeploy
     spec:
       containers:
-      - image: ${ECR_PRIVATE_REPO_URI}:${IMAGE_TAG}
-        name: addressbook
+      - name: addressbook
+        image: your_ecr_repo_uri:your_image_tag
         ports:
         - containerPort: 8080
-        resources: {}
         env:
-          - name: ALLOW_EMPTY_PASSWORD
-            value: "yes"
-status: {}
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+
