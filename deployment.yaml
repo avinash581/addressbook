@@ -20,6 +20,8 @@ spec:
       labels:
         app: mydeploy
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: addressbook
         image: your_ecr_repo_uri:your_image_tag
