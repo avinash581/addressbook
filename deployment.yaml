@@ -19,7 +19,7 @@ spec:
         app: mydeploy
     spec:
       containers:
-      - image: avinashreddi123456/practice_123:17
+      - image: ${ECR_PRIVATE_REPO_URI}:${IMAGE_TAG}
         name: addressbook
         ports:
         - containerPort: 8080
