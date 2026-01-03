@@ -23,7 +23,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: addressbook
-        image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/addressbook:latest
+        image: bitnami/tomcat:latest
         ports:
         - containerPort: 8080
         env:
